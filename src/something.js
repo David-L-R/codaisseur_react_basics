@@ -2,22 +2,27 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 const Something = () => {
-  const [article, setArticles] = useState()
+  const [articles, setArticles] = useState([])
 
   const fetchData = async () => {
-    const res = axios.get('https://jsonplaceholder.typicode.com/posts?_limit=5')
+    const res = await axios.get(
+      'https://jsonplaceholder.typicode.com/posts?_limit=5'
+    )
 
-    return res.data
+    console.log(res.data)
+    setArticles(res.data)
   }
 
   useEffect(() => {
-    // const res = await fetchData()
-    // console.log(res)
+    fetchData()
   }, [])
 
   return (
     <div>
       <h1>Something Important</h1>
+      {articles.map((article, index) => (
+        <p key={article.id}>{article.title}</p>
+      ))}
     </div>
   )
 }

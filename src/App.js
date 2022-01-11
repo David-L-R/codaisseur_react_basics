@@ -1,5 +1,5 @@
 import './App.css'
-import Something from './something'
+import Something from './Something'
 
 function App() {
   return (
