@@ -1,11 +1,13 @@
-import "./App.css";
+import './App.css'
+import Something from './something'
 
 function App() {
   return (
-    <div className='App'>
+    <div className="App">
       <p>hello world</p>
+      <Something />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
