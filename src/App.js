@@ -4,7 +4,7 @@ import Something from './Something'
 function App() {
   return (
     <div className="App">
-      <p>hello world</p>
+      <p className="p2">hello world</p>
       <Something />
     </div>
   )
